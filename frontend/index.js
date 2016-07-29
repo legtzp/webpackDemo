@@ -1,5 +1,7 @@
+import React from 'react';
+
 var component = require('./component');
 
-require('./main.css');
+console.log('hola s');
 
 document.body.appendChild(component());

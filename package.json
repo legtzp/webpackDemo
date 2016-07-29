@@ -5,19 +5,43 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --cache",
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "stats": "webpack --profile --json > stats.json",
+    "build": "webpack",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-1": "^6.5.0",
+    "clean-webpack-plugin": "^0.1.10",
     "css-loader": "^0.23.1",
+    "eslint": "^3.1.1",
+    "eslint-plugin-react": "^5.2.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "gh-pages": "^0.11.0",
+    "git-hooks": "^1.1.0",
     "html-webpack-plugin": "^2.22.0",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-loader": "^0.9.1",
+    "postcss-modules": "^0.5.0",
+    "purifycss-webpack-plugin": "^2.0.3",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.1",
     "webpack-validator": "^2.2.5"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.9.1",
+    "react": "^15.2.1"
   }
 }
